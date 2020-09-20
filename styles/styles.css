@@ -19,7 +19,7 @@
 body{
     background-color: var(--leftSideColor);
 
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     font-size: large;
     color: #333333;
 
@@ -28,8 +28,13 @@ body{
 }
 
 h1{
+    font-weight: 300;
     font-size: 600%;
     color: #333333;
+}
+
+.bold{
+    font-weight: 700 ;
 }
 
 .leftSideColour{
@@ -37,7 +42,7 @@ h1{
 }
 
 .rightSideColour{
-    color: var(--rightSideColor)
+    color: var(--rightSideColor);
 }
 
 .vibe{
@@ -50,17 +55,25 @@ h1{
     height: 100%;
     width: 50%;
     position: fixed;
-    z-index: 1;
+    z-index: 0;
     top: 0;
     overflow: hidden;
     padding-top: 20px;
 }
 
-.centered{
+.centeredLeft{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(36%, -70%);
+    text-align: center;
+}
+
+.centeredRight{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-160%, -70%);
     text-align: center;
 }
 
