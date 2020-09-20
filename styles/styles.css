@@ -1,15 +1,25 @@
-@keyframes vibe {
-    0% {color: #76ea6e}
-    25% {color: #86eac7}
-    50% {color: #a1c1ea}
-    75% {color: #eac0dc}
-    100% {color: #74ea6a}
+:root{
+    --leftSideColor: #f6f6f6;
+    --rightSideColor: #ff96d8;
+}
+
+@keyframes Rainbow {
+    0% {color: #fc0000
+    }
+    25% {color: #b07701
+    }
+    50% {color: #0037ff
+    }
+    75% {color: #da00ff
+    }
+    100% {color: #ff006d
+    }
 }
 
 body{
-    background-color: #f6f6f6;
+    background-color: var(--leftSideColor);
 
-    font-family: Arial, sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     font-size: large;
     color: #333333;
 
@@ -17,13 +27,49 @@ body{
     margin-left: 10%;
 }
 
-.header{
-    font-size: 400%;
-    margin: 0;
+h1{
+    font-size: 600%;
+    color: #333333;
 }
 
-.fade{
-    animation-name: vibe;
+.leftSideColour{
+    color: var(--leftSideColor);
+}
+
+.rightSideColour{
+    color: var(--rightSideColor)
+}
+
+.vibe{
+    animation-name: Rainbow;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+
+.split{
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.left{
+    left: 0;
+    background: var(--leftSideColor);
+}
+
+.right{
+    right: 0;
+    background: var(--rightSideColor);
 }
