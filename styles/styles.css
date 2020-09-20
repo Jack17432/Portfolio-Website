@@ -1,6 +1,7 @@
 :root{
-    --leftSideColor: #f6f6f6;
-    --rightSideColor: #ff96d8;
+    --offWhite: #f6f6f6;
+    --offPink: #ff96d8;
+    --offBlack: #333333;
 }
 
 @keyframes Rainbow {
@@ -17,72 +18,48 @@
 }
 
 body{
-    background-color: var(--leftSideColor);
-
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: large;
-    color: #333333;
-
-    margin-top: 15%;
-    margin-left: 10%;
+    font-weight: 300;
 }
 
 h1{
-    font-weight: 300;
-    font-size: 600%;
-    color: #333333;
-}
-
-.bold{
-    font-weight: 700 ;
-}
-
-.leftSideColour{
-    color: var(--leftSideColor);
-}
-
-.rightSideColour{
-    color: var(--rightSideColor);
-}
-
-.vibe{
-    animation-name: Rainbow;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+    font-weight: inherit;
+    font-size: 10vh;
 }
 
 .split{
-    height: 100%;
+    height: 100vh;
     width: 50%;
-    position: fixed;
-    z-index: 0;
+    position: absolute;
+    z-index: 1;
     top: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     padding-top: 20px;
 }
 
-.centeredLeft{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(36%, -70%);
-    text-align: center;
-}
-
-.centeredRight{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-160%, -70%);
-    text-align: center;
-}
-
-.left{
+.leftSide{
     left: 0;
-    background: var(--leftSideColor);
+    background: var(--offWhite);
+}
+.rightSide{
+    right: 0;
+    background: var(--offPink);
 }
 
-.right{
-    right: 0;
-    background: var(--rightSideColor);
+.centerLeft{
+    position: relative;
+    text-align: left;
+    left: 2%;
+    top: 35vh;
+
+    color: var(--offWhite);
+}
+
+.centerRight{
+    position: relative;
+    text-align: right;
+    right: 2%;
+    top: 35vh;
+
+    color: var(--offPink);
 }
