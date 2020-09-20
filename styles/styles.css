@@ -5,15 +5,20 @@
 }
 
 @keyframes Rainbow {
-    0% {color: #fc0000
+    0% {
+        color: #fc0000
     }
-    25% {color: #b07701
+    25% {
+        color: #b07701
     }
-    50% {color: #0037ff
+    50% {
+        color: #0037ff
     }
-    75% {color: #da00ff
+    75% {
+        color: #da00ff
     }
-    100% {color: #ff006d
+    100% {
+        color: #ff006d
     }
 }
 
@@ -34,6 +39,14 @@
     }
     100%{
         opacity: 1;
+    }
+}
+@keyframes hoverRight {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -300px 0;
     }
 }
 
@@ -86,4 +99,17 @@ h1{
 
     animation-name: loadRight;
     animation-duration: 1s;
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+a.mainLinkRight:hover{
+    text-decoration: none;
+    color: var(--offPink);
+    background: var(--offWhite);
+
 }
