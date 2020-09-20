@@ -24,7 +24,7 @@ body{
 
 h1{
     font-weight: inherit;
-    font-size: 10vh;
+    font-size: 6vw;
 }
 
 .split{
@@ -50,7 +50,7 @@ h1{
     position: relative;
     text-align: left;
     left: 2%;
-    top: 35vh;
+    top: 30vh;
 
     color: var(--offWhite);
 }
@@ -59,7 +59,7 @@ h1{
     position: relative;
     text-align: right;
     right: 2%;
-    top: 35vh;
+    top: 30vh;
 
     color: var(--offPink);
 }
