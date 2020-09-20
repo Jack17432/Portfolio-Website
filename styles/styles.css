@@ -43,10 +43,12 @@
 }
 @keyframes hoverRight {
     0%{
-        background-position: 0 0;
+        color: var(--offWhite);
+        background-color: var(--offPink);
     }
     100%{
-        background-position: -300px 0;
+        color: var(--offPink);
+        background-color: var(--offWhite);
     }
 }
 
@@ -111,5 +113,15 @@ a.mainLinkRight:hover{
     text-decoration: none;
     color: var(--offPink);
     background: var(--offWhite);
+    border-radius: 1vw;
+    border-left-width: 5px;
 
+    margin-left: -1%;
+
+    padding-top: 2.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+
+    animation-name: hoverRight;
+    animation-duration: 1s;
 }
