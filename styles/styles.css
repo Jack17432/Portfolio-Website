@@ -17,6 +17,26 @@
     }
 }
 
+@keyframes loadLeft {
+    0%{
+        opacity: 0;
+        left: 10px;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes loadRight {
+    0%{
+        opacity: 0;
+        right: 10px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 body{
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 300;
@@ -51,8 +71,10 @@ h1{
     text-align: left;
     left: 2%;
     top: 30vh;
-
     color: var(--offWhite);
+
+    animation-name: loadLeft;
+    animation-duration: 1s;
 }
 
 .centerRight{
@@ -60,6 +82,8 @@ h1{
     text-align: right;
     right: 2%;
     top: 30vh;
-
     color: var(--offPink);
+
+    animation-name: loadRight;
+    animation-duration: 1s;
 }
