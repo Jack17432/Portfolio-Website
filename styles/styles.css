@@ -44,26 +44,6 @@
         opacity: 1;
     }
 }
-@keyframes hoverPinktoWhite {
-    0%{
-        color: var(--offWhite);
-        background-color: var(--offPink);
-    }
-    100%{
-        color: var(--offPink);
-        background-color: var(--offWhite);
-    }
-}
-@keyframes hoverWhitetoPink {
-    0%{
-        color: var(--offPink);
-        background-color: var(--offWhite);
-    }
-    100%{
-        color: var(--offWhite);
-        background-color: var(--offPink);
-    }
-}
 
 body{
     font-family: 'Kumbh Sans', sans-serif;
@@ -173,6 +153,16 @@ a{
     position: relative;
     text-decoration: none;
     color: inherit;
+    transition: background-color 1s, color 1s;
+
+    border-radius: 1vw;
+    border-left-width: 5px;
+
+    margin-left: -1%;
+
+    padding-top: 2.5%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 a.mainLinkPtW:hover{
     text-decoration: none;
@@ -187,8 +177,7 @@ a.mainLinkPtW:hover{
     padding-left: 1%;
     padding-right: 1%;
 
-    animation-name: hoverPinktoWhite;
-    animation-duration: 0.5s;
+
 }
 a.linkWtP:hover{
     text-decoration: none;
@@ -200,9 +189,6 @@ a.linkWtP:hover{
     padding-top: 2.5%;
     padding-left: 1%;
     padding-right: 1%;
-
-    animation-name: hoverWhitetoPink;
-    animation-duration: 0.5s;
 }
 
 #footer{
