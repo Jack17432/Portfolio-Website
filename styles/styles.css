@@ -1,7 +1,9 @@
 :root{
-    --offWhite: #f6f6f6;
+    --offWhite: #ececec;
     --offPink: #ff96d8;
     --offBlack: #333333;
+    --backgroundColour: #75858a;
+    --footer: #d7d7d7;
 }
 
 @keyframes Rainbow {
@@ -41,7 +43,7 @@
         opacity: 1;
     }
 }
-@keyframes hoverRight {
+@keyframes hoverPinktoWhite {
     0%{
         color: var(--offWhite);
         background-color: var(--offPink);
@@ -51,15 +53,70 @@
         background-color: var(--offWhite);
     }
 }
+@keyframes hoverWhitetoPink {
+    0%{
+        color: var(--offPink);
+        background-color: var(--offWhite);
+    }
+    100%{
+        color: var(--offWhite);
+        background-color: var(--offPink);
+    }
+}
 
 body{
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 300;
+    background-color: var(--offPink);
 }
 
 h1{
     font-weight: inherit;
     font-size: 6vw;
+    margin: inherit;
+    color: var(--offPink);
+}
+
+p{
+    padding: 10%;
+    font-size: larger;
+    color: var(--offBlack);
+}
+
+table{
+    position: relative;
+    margin: 0 auto;
+    padding: 2%;
+    width: 50%;
+}
+th, td{
+    color: var(--offBlack);
+    padding-bottom: 5%;
+    width: 33.33%;
+}
+th{
+    font-weight: 600;
+    font-size: 1vw;
+}
+td{
+    font-size: 1vw;
+    padding: 0.5%;
+}
+
+
+.page{
+    position: relative;
+    background-color: var(--offWhite);
+    height: 100%;
+    width: 80%;
+    border-radius: 0.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+}
+
+.center{
+    padding-top: 10vh;
+    text-align: center;
 }
 
 .split{
@@ -108,8 +165,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
-
-a.mainLinkRight:hover{
+a.mainLinkPtW:hover{
     text-decoration: none;
     color: var(--offPink);
     background: var(--offWhite);
@@ -122,6 +178,35 @@ a.mainLinkRight:hover{
     padding-left: 1%;
     padding-right: 1%;
 
-    animation-name: hoverRight;
-    animation-duration: 1s;
+    animation-name: hoverPinktoWhite;
+    animation-duration: 0.5s;
 }
+a.linkWtP:hover{
+    text-decoration: none;
+    color: var(--offWhite);
+    background: var(--offPink);
+    border-radius: 1vw;
+    border-left-width: 5px;
+
+    padding-top: 2.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+
+    animation-name: hoverWhitetoPink;
+    animation-duration: 0.5s;
+}
+
+#footer{
+    position: relative;
+    bottom: 0;
+    text-align: center;
+
+    width: 80%;
+    border-radius: 0.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+
+    background-color: var(--footer);
+}
+
+
