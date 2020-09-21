@@ -2,6 +2,7 @@
     --offWhite: #ececec;
     --offPink: #ff96d8;
     --offBlack: #333333;
+    --offCyan: #60b7a4;
     --backgroundColour: #75858a;
     --footer: #d7d7d7;
 }
@@ -123,13 +124,18 @@ td{
 }
 
 .split{
-    height: 100vh;
+    height: 102vh;
     width: 50%;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     top: 0;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 0;
+    border-radius: 0 0 0.5vw 0;
+}
+
+.gap{
+    padding-top: 104vh;
 }
 
 .leftSide{
@@ -201,13 +207,14 @@ a.linkWtP:hover{
 
 #footer{
     position: relative;
+    left: 0;
+    right: 0;
     bottom: 0;
     text-align: center;
-
     width: 80%;
     border-radius: 0.5vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 0 auto;
+    margin: 2vh auto;
 
     background-color: var(--footer);
 }
