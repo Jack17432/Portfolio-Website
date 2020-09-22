@@ -52,15 +52,25 @@ body{
 }
 
 h1{
+    padding-top: 10vh;
     font-weight: inherit;
     font-size: 6vw;
     margin: inherit;
     color: var(--offPink);
 }
 
+h2{
+    padding-top: 7vh;
+    font-weight: inherit;
+    font-size: 4vw;
+    margin: inherit;
+    color: var(--offPink);
+}
+
 p{
-    padding: 10%;
+    padding: 2% 10%;
     font-size: larger;
+
     color: var(--offBlack);
 }
 
@@ -99,14 +109,13 @@ td{
 }
 
 .center{
-    padding-top: 10vh;
     text-align: center;
 }
 
 .split{
-    height: 102vh;
+    height: 102%;
     width: 50%;
-    position: absolute;
+    position: fixed;
     z-index: 0;
     top: 0;
     overflow-x: hidden;
@@ -141,7 +150,7 @@ td{
 .centerRight{
     position: relative;
     text-align: right;
-    right: 2%;
+    right: 1%;
     top: 30vh;
     color: var(--offPink);
 
@@ -153,7 +162,7 @@ a{
     position: relative;
     text-decoration: none;
     color: inherit;
-    transition: background-color 1s, color 1s;
+    transition: background-color 0.5s, color 0.5s;
 
     border-radius: 1vw;
     border-left-width: 5px;
@@ -164,7 +173,7 @@ a{
     padding-left: 1%;
     padding-right: 1%;
 }
-a.mainLinkPtW:hover{
+a.LinkPtW:hover{
     text-decoration: none;
     color: var(--offPink);
     background: var(--offWhite);
