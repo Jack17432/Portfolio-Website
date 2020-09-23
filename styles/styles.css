@@ -1,0 +1,269 @@
+:root{
+    --offWhite: #ececec;
+    --offPink: #ff96d8;
+    --offBlack: #333333;
+    --offCyan: #60b7a4;
+    --backgroundColour: #75858a;
+    --footer: #d7d7d7;
+}
+
+@keyframes Rainbow {
+    0% {
+        color: #fc0000
+    }
+    25% {
+        color: #b07701
+    }
+    50% {
+        color: #0037ff
+    }
+    75% {
+        color: #da00ff
+    }
+    100% {
+        color: #ff006d
+    }
+}
+
+@keyframes loadLeft {
+    0%{
+        opacity: 0;
+        left: 10px;
+
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes loadRight {
+    0%{
+        opacity: 0;
+        right: 10px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 300;
+    background-color: var(--offPink);
+}
+
+h1{
+    padding-top: 10vh;
+    font-weight: inherit;
+    font-size: 6vw;
+    margin: inherit;
+    color: var(--offPink);
+}
+
+h2{
+    padding-top: 7vh;
+    font-weight: inherit;
+    font-size: xx-large;
+    margin: inherit;
+    color: var(--offPink);
+}
+
+p{
+    padding: 2% 10%;
+    font-size: larger;
+
+    color: var(--offBlack);
+}
+
+table{
+    position: relative;
+    margin: 0 auto;
+    padding: 2%;
+    width: 50%;
+}
+th, td{
+    color: var(--offBlack);
+    padding-bottom: 5%;
+    width: 33.33%;
+}
+th{
+    font-weight: 600;
+    font-size: larger;
+}
+td{
+    font-size: smaller;
+    padding: 0.5%;
+}
+
+span.a {
+    display: inline;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: yellow;
+}
+
+.columnA {
+    float: left;
+    width: 60%;
+    padding: 15px;
+}
+.columnB {
+    float: left;
+    width: 30%;
+    padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:800px) {
+    .columnA {
+        width: 100%;
+    }
+    .columnB {
+        width: 100%;
+    }
+}
+
+.nav {
+    background-color: inherit;
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline-block;
+    font-size: inherit;
+    padding: 0;
+    width: 50%;
+}
+
+.offWhite{
+    color: var(--offWhite);
+}
+
+.page{
+    position: relative;
+    background-color: var(--offWhite);
+    height: 100%;
+    width: 80%;
+    border-radius: 0.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+}
+
+.center{
+    text-align: center;
+}
+
+.split{
+    height: 102%;
+    width: 50%;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 0;
+    border-radius: 0 0 0.5vw 0;
+}
+
+.gap{
+    padding-top: 104vh;
+}
+
+.leftSide{
+    left: 0;
+    background: var(--offWhite);
+}
+.rightSide{
+    right: 0;
+    background: var(--offPink);
+}
+
+.centerLeft{
+    position: relative;
+    text-align: left;
+    left: 2%;
+    top: 30vh;
+    color: var(--offWhite);
+
+    animation-name: loadLeft;
+    animation-duration: 1s;
+}
+
+.centerRight{
+    position: relative;
+    text-align: right;
+    right: 1%;
+    top: 30vh;
+    color: var(--offPink);
+
+    animation-name: loadRight;
+    animation-duration: 1s;
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.5s, color 0.5s;
+
+    border-radius: 1vw;
+    border-left-width: 5px;
+
+    margin-left: -1%;
+
+    padding-top: 2.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+a.LinkPtW:hover{
+    text-decoration: none;
+    color: var(--offPink);
+    background: var(--offWhite);
+    border-radius: 1vw;
+    border-left-width: 5px;
+
+    margin-left: -1%;
+
+    padding-top: 2.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+
+
+}
+a.linkWtP:hover{
+    text-decoration: none;
+    color: var(--offWhite);
+    background: var(--offPink);
+    border-radius: 1vw;
+    border-left-width: 5px;
+
+    padding-top: 2.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#footer{
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    width: 80%;
+    border-radius: 0.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2vh auto;
+
+    background-color: var(--footer);
+}
+
+
