@@ -1,6 +1,7 @@
 :root{
     --offWhite: #ececec;
     --offPink: #ff96d8;
+    --offPurple: #1a74b0;
     --offBlack: #333333;
     --offCyan: #60b7a4;
     --backgroundColour: #75858a;
@@ -61,15 +62,23 @@ h1{
 
 h2{
     padding-top: 7vh;
-    font-weight: inherit;
-    font-size: xx-large;
-    margin: inherit;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    color: var(--offPurple);
+}
+
+h3{
+    padding-top: 3vh;
+    font-weight:500;
+    font-size:1.3rem;
+    margin:0;
     color: var(--offPink);
 }
 
 p{
-    padding: 2% 10%;
-    font-size: larger;
+    padding: 0 10%;
+    font-size: 1.1rem;
 
     color: var(--offBlack);
 }
@@ -106,12 +115,14 @@ span.a {
 .columnA {
     float: left;
     width: 60%;
-    padding: 15px;
 }
 .columnB {
     float: left;
     width: 30%;
-    padding: 15px;
+}
+
+.row{
+    padding-left:10%;
 }
 
 /* Clear floats after the columns */
@@ -161,7 +172,9 @@ span.a {
 }
 
 .center{
-    text-align: center;
+    padding-left: 10%;
+    margin:0;
+
 }
 
 .split{
