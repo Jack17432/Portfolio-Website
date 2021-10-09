@@ -1,0 +1,8 @@
+:root{
+    /* Text Colours */
+    --darkText: #535353;
+}
+
+body{
+    color: var(--darkText);
+}
