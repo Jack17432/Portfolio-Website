@@ -1,0 +1,16 @@
+.card-large-container{
+    overflow: hidden;
+    width: 500px;
+    height: 100%;
+    border-radius: 2vh;
+    background-color: lightgray;
+}
+.card-large-container:hover{
+    transition: 150ms;
+    transform: translateX(-1px) translateY(-1px);
+    box-shadow: 2px 2px 5px gray;
+}
+
+.card-text-area{
+    padding: 5%;
+}

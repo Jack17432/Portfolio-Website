@@ -1,12 +1,20 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
-import Layout from '../components/layout'
-import '../components/global.css'
+import "../components/styles/global.css"
+import Layout from "../components/layout";
+import LargeCard from "../components/largeCard";
+import LargeCardArea from "../components/largeCardArea";
+import { imgCardStyle } from "../components/styles/global.module.css"
+import {StaticImage} from "gatsby-plugin-image";
 
 const IndexPage = () => {
     return (
         <Layout pageTitle={"csgraham.xyz"}>
-            <p1>I just want to have a website :(</p1>
+            <LargeCardArea>
+                <LargeCard img={<StaticImage src={"../images/PORTRAIT.jpg"} alt={"Portrait"} className={imgCardStyle}/>}>
+                    <h1>I'm</h1>
+                    <h1>Christopher Graham</h1>
+                </LargeCard>
+            </LargeCardArea>
         </Layout>
     )
 }

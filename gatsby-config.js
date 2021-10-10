@@ -3,5 +3,8 @@ module.exports = {
     siteUrl: "https://csgraham.xyz",
     title: "My Portfolio",
   },
-  plugins: [],
+  plugins: [
+      "gatsby-plugin-image",
+      "gatsby-plugin-sharp",
+  ],
 };
