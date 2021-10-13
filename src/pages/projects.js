@@ -10,19 +10,19 @@ const ProjectsPage = () => {
         <Layout pageTitle={"Projects"}>
             <Header>
                 <SmallCardArea>
-                    <SmallCard> 1 </SmallCard>
-                    <SmallCard> 2 </SmallCard>
-                    <SmallCard> 3 </SmallCard>
-                    <SmallCard> 4 </SmallCard>
-                    <SmallCard> 5 </SmallCard>
-                    <SmallCard> 6 </SmallCard>
-                    <SmallCard> 7 </SmallCard>
-                    <SmallCard> 8 </SmallCard>
-                    <SmallCard> 9 </SmallCard>
-                    <SmallCard> 10 </SmallCard>
-                    <SmallCard> 11 </SmallCard>
-                    <SmallCard> 12 </SmallCard>
-                    <SmallCard> 13 </SmallCard>
+                    <SmallCard> Project 1 </SmallCard>
+                    <SmallCard> Project 2 </SmallCard>
+                    <SmallCard> Project 3 </SmallCard>
+                    <SmallCard> Project 4 </SmallCard>
+                    <SmallCard> Project 5 </SmallCard>
+                    <SmallCard> Project 6 </SmallCard>
+                    <SmallCard> Project 7 </SmallCard>
+                    <SmallCard> Project 8 </SmallCard>
+                    <SmallCard> Project 9 </SmallCard>
+                    <SmallCard> Project 10 </SmallCard>
+                    <SmallCard> Project 11 </SmallCard>
+                    <SmallCard> Project 12 </SmallCard>
+                    <SmallCard> Project Main </SmallCard>
                 </SmallCardArea>
             </Header>
         </Layout>
