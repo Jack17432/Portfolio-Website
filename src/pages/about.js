@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import Layout from "../components/layout";
 import '../components/styles/global.css'
+import Fun from "../components/fun";
 
 const AboutPage = () => {
     return (
         <Layout pageTitle={"About me"}>
-            <p1>Hi im chris. :)</p1>
+            <Fun/>
         </Layout>
     )
 }

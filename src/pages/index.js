@@ -11,8 +11,8 @@ const IndexPage = () => {
         <Layout pageTitle={"csgraham.xyz"}>
             <LargeCardArea>
                 <LargeCard img={<StaticImage src={"../images/PORTRAIT.jpg"} alt={"Portrait"} className={imgCardStyle}/>}>
-                    <h1>I'm</h1>
-                    <h1>Christopher Graham</h1>
+                    <h1>Hello,</h1>
+                    <h1>I'm Christopher Graham</h1>
                 </LargeCard>
             </LargeCardArea>
         </Layout>
