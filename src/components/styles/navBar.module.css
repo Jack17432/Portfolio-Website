@@ -23,6 +23,6 @@
     background-color: lightblue;
 }
 .nav-link-item-active{
-    background-color: white;
-    color: var(--darkText);
+    background-color: var(--Niceblue);
+    color: var(--lightText);
 }
