@@ -1,8 +1,5 @@
 .card-area-large-container{
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    padding-left: 22vh;
-    padding-right: 22vh;
+    padding: 10vh 22vh;
 
     display: flex;
     height: 100%;

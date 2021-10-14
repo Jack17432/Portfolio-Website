@@ -1,12 +1,10 @@
-.card {
+.card{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #353535;
     font-size: 3rem;
-    color: #fff;
-    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    box-shadow: rgba(3, 8, 20, 0.1) 0 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0 0.075rem 0.175rem;
     height: 100%;
     width: 100%;
     border-radius: 4px;
@@ -14,13 +12,30 @@
     overflow: hidden;
 
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #353535 no-repeat center;
+    transform: translateY(0) scale(1);
+    z-index: 4;
 }
 
 .card:hover {
-    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    box-shadow: rgba(2, 8, 20, 0.1) 0 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0 0.175em 0.5em;
     transform: translateY(-3px) scale(1.1);
+    z-index: 99;
+}
+
+.img-style{
+    z-index: 0;
+    position: absolute;
+}
+
+.container {
+    z-index: 1;
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    color: var(--lightText);
+    background-color: darkblue;
 }
 
 .card:nth-child(1) {
@@ -59,6 +74,6 @@
 .card:nth-child(12) {
     grid-area: l;
 }
-.card:nth-child(13) {
+.card:last-child {
     grid-area: m;
 }
