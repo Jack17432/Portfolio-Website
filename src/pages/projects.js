@@ -18,7 +18,8 @@ const ProjectsPage = () => {
                     > uTimeTable </SmallCardExternal>
                     <SmallCardInternal>  </SmallCardInternal>
                     <SmallCardInternal>  </SmallCardInternal>
-                    <SmallCardInternal>  </SmallCardInternal>
+                    <SmallCardExternal img={ <StaticImage src={"../images/PORTRAIT.jpg"} alt={"Portrait"}/> } path='https://github.com/Jack17432/Portfolio-Website'
+                    > Portfolio </SmallCardExternal>
                     <SmallCardInternal>  </SmallCardInternal>
                     <SmallCardInternal>  </SmallCardInternal>
                     <SmallCardInternal>  </SmallCardInternal>
