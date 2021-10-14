@@ -1,7 +1,8 @@
 # This is the repo for my portfolio website
 This website is located at https://csgraham.xyz
 
-
+## Websites I need to draw insperation from 
+- Leadtech Innovation ( Ferran Buireu )
 ---
 # Components
 ## Fun
