@@ -1,5 +1,5 @@
 import React from "react"
-import NavBar from "../../atom/navigation/navigation"
+import NavBar from "../../molecule/navigation/navigation"
 import {
     mainContainer
 } from './layout.module.css'

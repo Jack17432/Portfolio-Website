@@ -27,11 +27,22 @@ body::-webkit-scrollbar {
     width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track {
-    background: transparent;
-}
-
 body::-webkit-scrollbar-thumb {
     background: #6649b8;
     border-radius: 0.175rem;
+}
+
+
+@media only screen and (min-width: 600px) {
+    body::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    body::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+    }
 }
