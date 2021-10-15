@@ -1,0 +1,134 @@
+.navBar:hover .link svg {
+    color: var(--pastal-pink);
+}
+
+.navBar:hover .item:hover svg {
+    color: var(--dark-pink);
+}
+
+.navBar:hover .item:hover .text {
+    color: var(--dark-pink);
+}
+
+.navBar:hover .top svg {
+    transform: rotate(-180deg);
+}
+
+.navBar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width var(--transition-speed-sidebar) ease;
+}
+
+.top svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed-sidebar) ease;
+}
+
+.top {
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: x-large;
+    letter-spacing: 0.1ch;
+    background-color: var(--bg-secondary);
+    margin-bottom: 5vh;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.item {
+    width: 100%;
+    cursor: pointer;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    transition: var(--transition-speed-sidebar) ease;
+}
+
+.text {
+    display: none;
+    margin-left: 1rem;
+}
+
+@keyframes text-hover {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+
+/* FUCK YOU @MEDIA*/
+@media only screen and (max-width: 600px) {
+    .navBar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .top {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: row;
+    }
+
+    .link{
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navBar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navBar:hover {
+        width: 14rem;
+    }
+
+    .navBar:hover .text {
+        animation-name: text-hover;
+        animation-duration: var(--transition-speed-sidebar);
+        animation-fill-mode: forwards;
+        display: block;
+    }
+
+    .link{
+        background-color: var(--bg-nav-hover);
+        transition: var(--transition-speed-sidebar) ease;
+        height: 5rem;
+        width: 0;
+    }
+
+    .navBar:hover .item:hover .link {
+        width: 100%;
+    }
+}
