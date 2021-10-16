@@ -1,13 +1,13 @@
 .navBar:hover .link svg {
-    color: var(--pastal-pink);
+    color: var(--pastel-pink-primary);
 }
 
 .navBar:hover .item:hover svg {
-    color: var(--dark-pink);
+    color: var(--pastel-pink-secondary);
 }
 
 .navBar:hover .item:hover .text {
-    color: var(--dark-pink);
+    color: var(--pastel-pink-secondary);
 }
 
 .navBar:hover .top svg {

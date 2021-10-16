@@ -12,8 +12,17 @@
     --transition-speed-sidebar: 200ms;
 
 
-    --pastal-pink: #ff7eee;
-    --dark-pink: #df49a6;
+    /*  Pastel color pallet  */
+    --pastel-pink-primary: #fad2e1;
+    --pastel-pink-secondary: #d5a7d5;
+    --pastel-blue-primary: #b2f7ef;
+    --pastel-blue-secondary: #7bdff2;
+    --pastel-green-primary: #abf1bc;
+    --pastel-green-secondary: #8ce68c;
+    --pastel-yellow-primary: #fcf5c7;
+    --pastel-yellow-secondary: #ffee93;
+    --pastel-purple-primary: #e7c6ff;
+    --pastel-purple-secondary: #c8b6ff;
 }
 
 body {
@@ -27,22 +36,11 @@ body::-webkit-scrollbar {
     width: 0.25rem;
 }
 
+body::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
 body::-webkit-scrollbar-thumb {
     background: #6649b8;
     border-radius: 0.175rem;
-}
-
-
-@media only screen and (min-width: 600px) {
-    body::-webkit-scrollbar-track {
-        background: transparent;
-    }
-}
-
-
-@media only screen and (max-width: 600px) {
-
-    body::-webkit-scrollbar-track {
-        background: var(--bg-primary);
-    }
 }

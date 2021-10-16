@@ -1,0 +1,46 @@
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+
+.container svg {
+    width: 70%;
+    height: 70%;
+}
+
+.container:hover svg {
+    animation-name: jump;
+    animation-duration: 0.4s;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        animation-timing-function: ease-in-out;
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        animation-timing-function: ease-in-out;
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
