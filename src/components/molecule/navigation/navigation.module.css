@@ -18,6 +18,7 @@
     position: fixed;
     background-color: var(--bg-primary);
     transition: width var(--transition-speed-sidebar) ease;
+    z-index: 999;
 }
 
 .top svg {

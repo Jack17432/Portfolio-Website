@@ -6,6 +6,7 @@ import {
 import ZoneButton from "../../atom/zoneButton/zoneButton";
 import {useState} from "react";
 import ShowCase from "../../atom/showCase/showCase";
+import WaveSection from "../../atom/waveSection/waveSection";
 
 const Landing = () => {
 
@@ -57,6 +58,8 @@ const Landing = () => {
                             icon={icon['hands']} setZone={setZone}/>
 
             </div>
+
+            <WaveSection zone={zone} height={'5rem'}/>
         </div>
     )
 }
