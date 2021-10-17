@@ -58,19 +58,19 @@ const Landing = () => {
 
                 <ShowCase/>
 
-                <ZoneButton x={'18vw'} y={'14vh'}
+                <ZoneButton x={'calc(18vw - 40px)'} y={'14vh'}
                             zonePrim={colourPrimaryDict['pink']} zoneSec={colourSecondaryDict['pink']}
                             icon={icon['child']} setZone={setZone}/>
-                <ZoneButton x={'14vw'} y={'72vh'}
+                <ZoneButton x={'calc(14vw - 40px)'} y={'72vh'}
                             zonePrim={colourPrimaryDict['blue']} zoneSec={colourSecondaryDict['blue']}
                             icon={icon['code']} setZone={setZone}/>
                 <ZoneButton x={'40vw'} y={'8vh'}
                             zonePrim={colourPrimaryDict['purple']} zoneSec={colourSecondaryDict['purple']}
                             icon={icon['grade']} setZone={setZone}/>
-                <ZoneButton x={'82vw'} y={'17vh'}
+                <ZoneButton x={'calc(82vw - 40px)'} y={'17vh'}
                             zonePrim={colourPrimaryDict['green']} zoneSec={colourSecondaryDict['green']}
                             icon={icon['robot']} setZone={setZone}/>
-                <ZoneButton x={'85vw'} y={'78vh'}
+                <ZoneButton x={'calc(85vw - 40px)'} y={'78vh'}
                             zonePrim={colourPrimaryDict['yellow']} zoneSec={colourSecondaryDict['yellow']}
                             icon={icon['hands']} setZone={setZone}/>
 

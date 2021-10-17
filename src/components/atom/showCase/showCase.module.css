@@ -1,5 +1,5 @@
 .container {
-    height: 50vh;
+    width: 900px;
     aspect-ratio: 16/9;
-    background-color: var(--bg-primary);
+    background-color: white;
 }
