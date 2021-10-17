@@ -1,16 +1,21 @@
 import * as React from 'react'
-import {
-    container,
-    wrapper
-} from './landing.module.css'
+import {useEffect, useState} from 'react'
+import {container, wrapper} from './landing.module.css'
 import ZoneButton from "../../atom/zoneButton/zoneButton";
-import {useState} from "react";
 import ShowCase from "../../atom/showCase/showCase";
 import WaveSection from "../../atom/waveSection/waveSection";
 
 const Landing = () => {
 
     const [ zone, setZone ] = useState(['var(--pastel-pink-primary)']);
+
+    const zoneDict = {
+        0: 'pink',
+        1: 'blue',
+        2: 'purple',
+        3: 'green',
+        4: 'yellow'
+    }
 
     const colourPrimaryDict = {
         'pink': 'var(--pastel-pink-primary)',
@@ -34,6 +39,18 @@ const Landing = () => {
         'code': <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code" className="svg-inline--fa fa-code fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"/></svg>,
         'child': <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="child" className="svg-inline--fa fa-child fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M120 72c0-39.765 32.235-72 72-72s72 32.235 72 72c0 39.764-32.235 72-72 72s-72-32.236-72-72zm254.627 1.373c-12.496-12.497-32.758-12.497-45.254 0L242.745 160H141.254L54.627 73.373c-12.496-12.497-32.758-12.497-45.254 0-12.497 12.497-12.497 32.758 0 45.255L104 213.254V480c0 17.673 14.327 32 32 32h16c17.673 0 32-14.327 32-32V368h16v112c0 17.673 14.327 32 32 32h16c17.673 0 32-14.327 32-32V213.254l94.627-94.627c12.497-12.497 12.497-32.757 0-45.254z"/></svg>
     }
+
+    function getRandColour() {
+        let randNum = Math.floor(Math.random() * 5);
+        return colourPrimaryDict[zoneDict[randNum]]
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => setZone(getRandColour), 5000);
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     return (
         <div className={container}>

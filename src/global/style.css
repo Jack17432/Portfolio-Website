@@ -41,6 +41,6 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #6649b8;
+    background: var(--pastel-pink-secondary);
     border-radius: 0.175rem;
 }
