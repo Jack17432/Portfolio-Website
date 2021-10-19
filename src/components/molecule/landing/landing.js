@@ -4,6 +4,7 @@ import {container, wrapper} from './landing.module.css'
 import ZoneButton from "../../atom/zoneButton/zoneButton";
 import ShowCase from "../../atom/showCase/showCase";
 import WaveSection from "../../atom/waveSection/waveSection";
+import {StaticImage} from "gatsby-plugin-image";
 
 const Landing = () => {
 
@@ -40,6 +41,14 @@ const Landing = () => {
         'child': <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="child" className="svg-inline--fa fa-child fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M120 72c0-39.765 32.235-72 72-72s72 32.235 72 72c0 39.764-32.235 72-72 72s-72-32.236-72-72zm254.627 1.373c-12.496-12.497-32.758-12.497-45.254 0L242.745 160H141.254L54.627 73.373c-12.496-12.497-32.758-12.497-45.254 0-12.497 12.497-12.497 32.758 0 45.255L104 213.254V480c0 17.673 14.327 32 32 32h16c17.673 0 32-14.327 32-32V368h16v112c0 17.673 14.327 32 32 32h16c17.673 0 32-14.327 32-32V213.254l94.627-94.627c12.497-12.497 12.497-32.757 0-45.254z"/></svg>
     }
 
+    const imgDict = {
+        'var(--pastel-pink-primary)': <StaticImage src={'../../../images/PXL_20210426_030251882.PORTRAIT.jpg'} alt={'HeaderImg'}/>,
+        'var(--pastel-blue-primary)': <StaticImage src={'../../../images/TimeTableApp.jpg'} alt={'HeaderImg'}/>,
+        'var(--pastel-purple-primary)': <StaticImage src={'../../../images/PXL_20210222_011117552.jpg'} alt={'HeaderImg'}/>,
+        'var(--pastel-green-primary)': <StaticImage src={'../../../images/PXL_20210409_210643569.jpg'} alt={'HeaderImg'}/>,
+        'var(--pastel-yellow-primary)': <StaticImage src={'../../../images/PXL_20201113_234224104.MP.jpg'} alt={'HeaderImg'}/>
+    }
+
     function getRandColour() {
         let randNum = Math.floor(Math.random() * 5);
         return colourPrimaryDict[zoneDict[randNum]]
@@ -56,7 +65,9 @@ const Landing = () => {
         <div className={container}>
             <div className={wrapper} style={{ backgroundColor: zone }}>
 
-                <ShowCase/>
+                <ShowCase>
+                    { imgDict[zone] }
+                </ShowCase>
 
                 <ZoneButton x={'calc(18vw - 40px)'} y={'14vh'}
                             zonePrim={colourPrimaryDict['pink']} zoneSec={colourSecondaryDict['pink']}

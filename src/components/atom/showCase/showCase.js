@@ -2,11 +2,12 @@ import * as React from 'react'
 import {
     container
 } from './showCase.module.css'
+import {StaticImage} from "gatsby-plugin-image";
 
-const ShowCase = ({  }) => {
+const ShowCase = ({ children }) => {
     return (
         <div className={container}>
-
+            { children }
         </div>
     )
 }
