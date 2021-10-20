@@ -1,0 +1,9 @@
+.container {
+    height: 20px;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.wrapper {
+    color: var(--text-primary-dark);
+}
