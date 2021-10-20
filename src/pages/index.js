@@ -5,11 +5,13 @@ import StatsArea from "../components/molecule/statsArea/statsArea";
 import Card from "../components/atom/card/card";
 import BarGraph from "../components/molecule/barGraph/barGraph";
 import Bar from '../components/atom/bar/bar'
+import ColoredZone from "../components/molecule/coloredZone/coloredZone";
 
 export default function Home() {
     return (
       <Layout>
           <Landing/>
+
           <StatsArea bgColor={'white'}>
               <Card width={'500px'} bgColor={'var(--pastel-blue-primary)'} color={'var(--text-primary-dark)'}>
                   <h1> Programing languages </h1>
@@ -25,6 +27,10 @@ export default function Home() {
                   <Bar size={'40%'} color={'var(--pastel-pink-primary)'}> Android App Development </Bar>
               </BarGraph>
           </StatsArea>
+
+          <ColoredZone color={'var(--pastel-blue-primary)'}>
+
+          </ColoredZone>
       </Layout>
   )
 }
