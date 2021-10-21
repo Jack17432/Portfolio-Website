@@ -94,12 +94,6 @@ export default function NavBar() {
                                 <span className={text}>Contact</span>
                             </Link>
                         </div>
-
-                        <div className={headPole}>
-                            <div className={pole}>
-                                Test
-                            </div>
-                        </div>
                     </div>
                 </li>
             </ul>
