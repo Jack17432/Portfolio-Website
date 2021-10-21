@@ -2,11 +2,23 @@
     color: var(--pastel-pink-primary);
 }
 
-.navBar:hover .item:hover svg {
+.navBar:hover .item:hover .main:hover svg {
     color: var(--pastel-pink-secondary);
 }
 
-.navBar:hover .item:hover .text {
+.navBar:hover .item:hover .pole:hover svg {
+    color: var(--pastel-pink-secondary);
+}
+
+.main {
+
+}
+
+.navBar:hover .item:hover .main:hover .text {
+    color: var(--pastel-pink-secondary);
+}
+
+.navBar:hover .item:hover .pole:hover .text {
     color: var(--pastel-pink-secondary);
 }
 
@@ -20,6 +32,7 @@
     transition: width var(--transition-speed-sidebar) ease;
     z-index: 999;
 }
+
 
 .top svg {
     transform: rotate(0deg);
@@ -49,6 +62,7 @@
 .item {
     width: 100%;
     cursor: pointer;
+    position: relative;
 }
 
 .link {
@@ -131,16 +145,54 @@
 
     .link{
         background-color: var(--bg-nav-hover);
-        transition: var(--transition-speed-sidebar) ease;
+        transition: var(--transition-speed-sidebar);
         height: 5rem;
         width: 0;
     }
 
-    .navBar:hover .item:hover .link {
+    .navBar:hover .item:hover .main:hover .link {
+        width: 100%;
+    }
+
+    .navBar:hover .item:hover .pole:hover .link {
         width: 100%;
     }
 
     .link svg {
         min-width: 2rem;
+    }
+
+    .accordion {
+
+    }
+
+    .headPole{
+        position: absolute;
+    }
+
+    .accordion:hover .pole {
+        position: relative;
+        display: flex;
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+        height: 5rem;
+        transform: translateX(14rem) translateY(-5rem);
+        animation-name: poleExtend;
+        animation-fill-mode: forwards;
+        animation-duration: var(--transition-speed-sidebar);
+    }
+
+}
+
+.pole {
+    display: none;
+    width: 0;
+}
+
+@keyframes poleExtend {
+    0% {
+    }
+    100% {
+        width: 14rem;
     }
 }
