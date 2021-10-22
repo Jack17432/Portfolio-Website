@@ -173,7 +173,7 @@
     .accordion:hover .pole {
         position: relative;
         display: flex;
-        background-color: var(--bg-secondary);
+        background-color: var(--bg-third);
         color: var(--text-primary);
         height: 5rem;
         transform: translateX(14rem) translateY(-5rem);
