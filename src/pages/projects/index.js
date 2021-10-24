@@ -11,10 +11,11 @@ export default function Home() {
     const allParticlePos = [];
     const allParticleVel = [];
     const gravity = -0.1;
-    const friction = 0.7;
+    const friction = 1;
     const leftWall = -200;
-    const rightWall = 250;
-    const floor = 100;
+    const rightWall = 300;
+    const floor = -100;
+    const roof = -500;
 
     function fire(obj, allParticle, allParticlePos, allParticleVel) {
         const particle = document.createElement('div');
@@ -42,9 +43,15 @@ export default function Home() {
 
             // Check if ball is outside of field
             for(let i = 0; i < allParticle.length; i++){
-                if (allParticlePos[i][1] > floor) {
-                    allParticlePos[i][1] = 100;
+
+                if (allParticlePos[i][1] > floor || allParticlePos[i][1] < roof) {
                     allParticleVel[i][1] = -allParticleVel[i][1] * friction;
+
+                    if (allParticlePos[i][1] > floor) {
+                        allParticlePos[i][1] = floor;
+                    } else {
+                        allParticlePos[i][1] = roof;
+                    }
                 }
 
                 if (leftWall > allParticlePos[i][0] || allParticlePos[i][0] > rightWall) {

@@ -3,6 +3,7 @@
     top: 70%;
     left: calc(50% - 50px);
 
+    z-index: 10;
     border-radius: 5px;
     width: 100px;
     height: 30px;
@@ -10,8 +11,9 @@
 }
 
 .ball {
+    z-index: -5;
     position: absolute;
-    top: 0;
+    top: -100px;
     left:50%;
     width: 20px;
     height: 20px;
