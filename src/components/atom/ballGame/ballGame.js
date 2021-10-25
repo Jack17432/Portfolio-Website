@@ -46,7 +46,10 @@ const BallGame = () => {
     }
 
     function collision(obj1, obj2, info) {
-        // TODO, to collision work
+        allParticleVel[obj1][0] = -allParticleVel[obj1][0];
+        allParticleVel[obj1][1] = -allParticleVel[obj1][1];
+        allParticleVel[obj2][0] = -allParticleVel[obj2][0];
+        allParticleVel[obj2][1] = -allParticleVel[obj2][1];
     }
 
     function fire(obj, allParticle, allParticlePos, allParticleVel) {
@@ -79,6 +82,7 @@ const BallGame = () => {
                 const diffDist = getDist(i, x);
                 if (diffDist[0] < 20){
                     console.log(diffDist);
+                    collision(i, x, diffDist);
                 }
             }
 
