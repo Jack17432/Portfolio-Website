@@ -16,8 +16,9 @@ export default function Home() {
               <Card width={'500px'} bgColor={'var(--pastel-blue-primary)'} color={'var(--text-primary-dark)'}>
                   <h1> Programing languages </h1>
                   <p>
-                      These skills are all relative to each other and I am in no way
-                      shape or form an expert in any of these languages.
+                      I have been coding sine 2014, so im still pretty new. Most of my programing experience is just
+                      having fun doing calculators and stuff like that in java. However I am now using mostly python
+                      since it is so much easir to do everything.
                   </p>
               </Card>
               <BarGraph width={'800px'}>
